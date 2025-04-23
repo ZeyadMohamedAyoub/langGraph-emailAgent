@@ -23,7 +23,8 @@ if __name__ == "__main__":
         "subject": "Meeting Reminder",
         "body": "Don't forget our meeting tomorrow at 3 PM.",
     }
-    result = process_email(legit_email, callbacks=[langfuse_handler])
+    # result = process_email(legit_email, callbacks=[langfuse_handler])
+    result = process_email(legit_email)
     print("\n\nFinal legit Done\n")
     # print(result)
     
@@ -33,7 +34,8 @@ if __name__ == "__main__":
         "body": "CONGRATULATIONS! you've been selected to receive $10,0000,000! Send your bank details to claim your prize NOW!!!"
     }
 
-    result = process_email(spam_email, callbacks=[langfuse_handler])
+    result = process_email(spam_email)
+    # result = process_email(spam_email, callbacks=[langfuse_handler])
     print("\n\nFinal spam Done\n")
     # print(result)
     
